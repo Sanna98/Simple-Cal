@@ -19,25 +19,25 @@ class Btn {
   static const String n7 = "7";
   static const String n8 = "8";
   static const String n9 = "9";
-}
 
-static const List<String> buttonValues = [
-  Btn.del,
-  Btn.clr,
-  Btn.per,
-  Btn.multiply,
-  Btn.n7,
-  Btn.n8,
-  Btn.n9,
-  Btn.divide,
-  Btn.n4,
-  Btn.n5,
-  Btn.n6,
-  Btn.subtract,
-  Btn.n1,
-  Btn.n2,
-  Btn.n3,
-  Btn.add,
-  Btn.n0,
-  Btn.dot,
-];
+  static const List<String> buttonValues = [
+    del,
+    clr,
+    per,
+    multiply,
+    n7,
+    n8,
+    n9,
+    divide,
+    n4,
+    n5,
+    n6,
+    subtract,
+    n1,
+    n2,
+    n3,
+    add,
+    n0,
+    dot,
+  ];
+}
