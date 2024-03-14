@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 
 class CalculatorScreen extends StatefulWidget {
-  const CalculatorScreen({super.key});
+  const CalculatorScreen({Key? key}) : super(key: key);
 
   @override
   State<CalculatorScreen> createState() => _CalculatorScreenState();
@@ -10,19 +10,36 @@ class CalculatorScreen extends StatefulWidget {
 class _CalculatorScreenState extends State<CalculatorScreen> {
   @override
   Widget build(BuildContext context) {
-    return const Scaffold(
+    return Scaffold(
       body: SafeArea(
         bottom: false,
-        child: (Column(
-        children: [//output
-        Text("0", style: TextStyle(
-          fontSize: 48,
-          fontWeight: FontWeight.bold,
+        child: Column(
+          children: [
+            // Output Display
+            Expanded(
+              child: SingleChildScrollView(
+                child: Container(
+                  alignment: Alignment.bottomRight,
+                  padding: const EdgeInsets.all(16),
+                  child: Text(
+                    "0",
+                    style: const TextStyle(
+                      fontSize: 48,
+                      fontWeight: FontWeight.bold,
+                    ),
+                    textAlign: TextAlign.end,
+                  ),
+                ),
+              ),
+            ),
+
+            // Buttons or Other Widgets
+            Wrap(
+              children: [],
+            )
+          ],
         ),
-        textAlign: TextAlign.end,
-        )
-        ],
-      ))),
+      ),
     );
   }
 }
